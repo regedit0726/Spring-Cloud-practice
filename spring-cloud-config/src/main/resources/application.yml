@@ -1,0 +1,14 @@
+server:
+  port: 84
+  context-path: /config
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/regedit0726/Spring-Cloud-practice.git
+          search-paths: config-repo
+          default-label: master

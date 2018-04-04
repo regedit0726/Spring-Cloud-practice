@@ -4,7 +4,7 @@ server:
 
 spring:
   application:
-    name: spring-cloud-eureka
+    name: eureka
   # 安全认证的配置
   security:
     user:
@@ -16,12 +16,9 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://discovery:${server.port}/eureka/
+      defaultZone: http://eureka:${server.port}/eureka/
   server:
     waitTimeInMsWhenSyncEmpty: 0
     enable-self-preservation: false
   instance:
-    hostname: spring-cloud-eureka
-
-logging:
-  file: spring-cloud-eureka.log
+    hostname: eureka

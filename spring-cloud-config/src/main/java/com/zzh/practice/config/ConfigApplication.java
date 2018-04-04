@@ -1,4 +1,4 @@
-package com.zzh.practice.zuul.zipkin.eureka;
+package com.zzh.practice.config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
