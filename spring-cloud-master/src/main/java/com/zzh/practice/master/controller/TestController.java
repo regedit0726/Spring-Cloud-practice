@@ -15,9 +15,18 @@ import javax.servlet.http.HttpServletRequest;
  */
 @RestController
 public class TestController {
+//    @Value("${test}")
+    String test = "test";
+
+    @ResponseBody
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    public String hello(HttpServletRequest request) {
+        return "Hello World";
+    }
+
     @ResponseBody
     @RequestMapping(value = "/test", method = RequestMethod.GET)
     public String test(HttpServletRequest request) {
-        return "Hello World";
+        return test;
     }
 }

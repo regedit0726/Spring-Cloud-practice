@@ -1,6 +1,0 @@
-server:
-  port: 81
-  context-path: /master
-spring:
-  application:
-    name: master

@@ -1,0 +1,12 @@
+server:
+  port: 81
+  context-path: /master
+spring:
+  application:
+    name: master
+  profiles:
+      active: dev
+  cloud:
+    config:
+#        label: config
+      uri: http://localhost:84/config
