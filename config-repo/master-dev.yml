@@ -1,1 +1,4 @@
+server:
+  port: 81
+  context-path: /master
 test: master-dev-zzh
