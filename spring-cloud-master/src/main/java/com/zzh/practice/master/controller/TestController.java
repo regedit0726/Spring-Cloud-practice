@@ -1,5 +1,6 @@
 package com.zzh.practice.master.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -15,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 @RestController
 public class TestController {
-//    @Value("${test}")
+    @Value("${test}")
     String test = "test";
 
     @ResponseBody
