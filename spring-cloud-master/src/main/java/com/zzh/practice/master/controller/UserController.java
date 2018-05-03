@@ -1,7 +1,7 @@
 package com.zzh.practice.master.controller;
 
-import com.zzh.practice.master.dao.UserDao;
 import com.zzh.practice.master.model.User;
+import com.zzh.practice.master.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,12 +17,12 @@ import javax.servlet.http.HttpServletRequest;
  * @author zzh
  */
 @RestController
-public class TestController {
+public class UserController {
 //    @Value("${test}")
     String test = "test";
 
     @Autowired
-    UserDao userDao;
+    UserService userService;
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String hello(HttpServletRequest request) {
@@ -36,6 +36,6 @@ public class TestController {
 
     @RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
     public User persons(HttpServletRequest request, @PathVariable("id") int id) {
-        return userDao.getUserById(id);
+        return userService.getUserById(id);
     }
 }
