@@ -6,10 +6,10 @@
     </sql>
 
     <!-- 登录 查询用户信息 -->
-    <select id="getUserById" resultMap="BaseResultMap" parameterType="com.zzh.practice.master.model.User">
+    <select id="getUserById" resultType="com.zzh.practice.master.model.User" parameterType="com.zzh.practice.master.model.User">
         select
         <include refid="Base_Column_List"/>
         from user
-        where id = #{id,jdbcType=int}
+        where id = #{id}
     </select>
 </mapper>
