@@ -1,0 +1,22 @@
+server:
+  port: 8081
+  context-path: /spring-cloud-web
+
+eureka:
+  username: zzh
+  password: zzh
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${eureka.username}:${eureka.password}@eureka.sinopec.com:8761/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+    appname: spring-cloud-web
+    leaseRenewalIntervalInSeconds: 10
+#    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}
+    hostname: localhost
+
+logging:
+  file: /tmp/spring-cloud-web.log

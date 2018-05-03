@@ -8,6 +8,21 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/regedit0726/Spring-Cloud-practice.git
+          uri: https://github.com/regedit0726/spring-cloud-practice.git
           search-paths: config-repo
-          default-label: zzh
+          default-label: master
+#加密证书文件配置，alias别名(-alias指定)，password密码(-storepass指定)，secret(-keypass指定),location证书/证书库保存路径
+#证书生成命令：keytool -genkeypair -alias mytestkey -keyalg RSA \
+        #  -dname "CN=Web Server,OU=Unit,O=Organization,L=City,S=State,C=US" \
+        #  -keypass changeme -keystore server.jks -storepass letmein
+#encrypt:
+#  key-store:
+#    alias:
+#    password:
+#    secret:
+#    location:
+
+#对称加密密钥设置
+#encrypt:
+#  key: mykey
+

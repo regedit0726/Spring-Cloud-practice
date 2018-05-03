@@ -22,7 +22,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <start-class>com.zzh.practice.SpringCloudEurakeApplication</start-class>
+        <start-class>com.zzh.practice.config.ConfigApplication</start-class>
     </properties>
 
     <repositories>
@@ -40,7 +40,6 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-server</artifactId>
-            <version>1.4.3.RELEASE</version>
         </dependency>
     </dependencies>
 

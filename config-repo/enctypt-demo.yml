@@ -1,0 +1,5 @@
+foo:
+  bar: `{cipher}{key:testkey}...`
+
+#加密curl localhost:8888/encrypt -d mysecret
+#解密
