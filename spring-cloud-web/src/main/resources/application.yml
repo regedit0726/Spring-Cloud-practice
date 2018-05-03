@@ -1,6 +1,6 @@
 server:
   port: 8081
-  context-path: /spring-cloud-web
+  context-path: /web
 
 eureka:
   username: zzh
