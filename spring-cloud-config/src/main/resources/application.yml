@@ -26,3 +26,5 @@ spring:
 #encrypt:
 #  key: mykey
 
+logging:
+  file: /tmp/config.log

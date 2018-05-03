@@ -26,4 +26,4 @@ eureka:
     hostname: eureka
 
 logging:
-  file: /tmp/spring-cloud-eureka.log
+  file: /tmp/eureka.log
