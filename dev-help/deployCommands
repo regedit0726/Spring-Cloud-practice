@@ -1,19 +1,19 @@
 #config
 docker build -t spring-cloud/config:v1 /usr/local/application/config
 
-docker run -d -t -i -p 8888:84 --name config.zzh.com -v /usr/local/application/config:/tmp spring-cloud/config:v1 /bin/bash
+docker run -dti -p 8888:84 --name config.zzh.com -v /usr/local/application/config:/tmp spring-cloud/config:v1 /bin/bash
 
 #eureka
 docker build -t spring-cloud/eureka:v1 /usr/local/application/eureka
 
-docker run -d -t -i -p 8861:8761 --name eureka.zzh.com -v /usr/local/application/eureka:/tmp spring-cloud/eureka:v1 /bin/bash
+docker run -dti -p 8861:8761 --name eureka.zzh.com -v /usr/local/application/eureka:/tmp spring-cloud/eureka:v1 /bin/bash
 
 #web
 docker build -t spring-cloud/web:v1 /usr/local/application/web
 
-docker run -d -it -p 8081:81 --name web.zzh.com --link eureka.zzh.com:eureka.zzh.com -v /usr/local/application/web:/tmp spring-cloud/web:v1 /bin/bash
+docker run -dti -p 8081:81 --name web.zzh.com --link eureka.zzh.com:eureka.zzh.com -v /usr/local/application/web:/tmp spring-cloud/web:v1 /bin/bash
 
 #master
 docker build -t spring-cloud/master:v1 /usr/local/application/master
 
-docker run -d -it -p 8082:82 --name master.zzh.com --link eureka.zzh.com:eureka.zzh.com -v /usr/local/application/master:/tmp spring-cloud/master:v1 /bin/bash
+docker run -dti -p 8082:82 --name master.zzh.com --link eureka.zzh.com:eureka.zzh.com -v /usr/local/application/master:/tmp spring-cloud/master:v1 /bin/bash
