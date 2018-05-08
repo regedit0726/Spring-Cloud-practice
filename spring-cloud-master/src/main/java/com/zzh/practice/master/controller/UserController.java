@@ -24,6 +24,9 @@ public class UserController {
     @Autowired
     UserService userService;
 
+//    @Autowired
+//    RedisService redisService;
+
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String hello(HttpServletRequest request) {
         return "Hello World";
@@ -38,4 +41,10 @@ public class UserController {
     public User persons(HttpServletRequest request, @PathVariable("id") int id) {
         return userService.getUserById(id);
     }
+
+//    @RequestMapping(value = "/testRedis", method = RequestMethod.GET)
+//    public String testRedis() {
+//        redisService.setObject("username", "lisi");
+//        return "OK";
+//    }
 }

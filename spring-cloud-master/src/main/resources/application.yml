@@ -9,18 +9,16 @@ spring:
     schema: classpath:sql/schema.sql
     data: classpath:sql/data.sql
     driver-class-name: org.h2.Driver
-
-spring:
   redis:
-        host: localhost
-        port: 6380
-        pool:
-          max-idle: 8
-          min-idle: 0
-          max-active: 8
-          max-wait: -1
-        database: 0
-        timeout: 0
+    host: localhost
+    port: 6380
+    pool:
+      max-idle: 8
+      min-idle: 0
+      max-active: 8
+      max-wait: -1
+    database: 0
+    timeout: 0
 
 logging:
   file: /logs/master.log
