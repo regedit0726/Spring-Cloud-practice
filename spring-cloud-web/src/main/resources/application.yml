@@ -19,4 +19,4 @@ eureka:
     hostname: localhost
 
 logging:
-  file: /tmp/spring-cloud-web.log
+  file: /logs/web.log
