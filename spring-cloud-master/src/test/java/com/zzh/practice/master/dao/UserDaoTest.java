@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.List;
+
 /**
  * description： <br>
  * createTime: 2018/4/1419:29 <br>
@@ -24,5 +26,11 @@ public class UserDaoTest {
     public void getUserByIdTest() {
         User user = userDao.getUserById(1);
         assert user != null;
+    }
+
+    @Test
+    public void queryUserTest() {
+        List<User> users = userDao.queryUser("  ");
+        assert !users.isEmpty();
     }
 }

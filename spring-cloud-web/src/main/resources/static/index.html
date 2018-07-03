@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>index</title>
+    <script src="js/jquery.min-1.11.1.js"></script>
+</head>
+<body>
+<h1>index</h1>
+<button type="button" onclick="test()">测试</button>
+<script>
+    function test() {
+        var user = {
+            name:"zhangsan",
+            age:11,
+            nickName:"zs",
+        }
+        $.ajax({
+            url:"test",
+            method:"POST",
+            data:JSON.stringify(user),
+            headers: {
+                'Content-Type':'application/json;charset=UTF-8'
+            },
+            dataType:"JSON",
+            success:function(data) {
+                console.log(data);
+            }
+        });
+    }
+</script>
+</body>
+</html>

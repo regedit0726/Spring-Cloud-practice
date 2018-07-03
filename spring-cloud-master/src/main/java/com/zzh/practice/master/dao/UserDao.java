@@ -1,7 +1,10 @@
 package com.zzh.practice.master.dao;
 
 import com.zzh.practice.master.model.User;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 /**
  * description： <br>
@@ -12,4 +15,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserDao {
     User getUserById(int id);
+
+    List<User> queryUser(@Param("name") String name);
 }

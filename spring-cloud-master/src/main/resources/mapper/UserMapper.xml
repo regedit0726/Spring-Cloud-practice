@@ -12,4 +12,16 @@
         from user
         where id = #{id}
     </select>
+
+    <!-- 登录 查询用户信息 -->
+    <!-- -->
+    <!--!name.trim().equals('')-->
+    <select id="queryUser" resultType="com.zzh.practice.master.model.User" parameterType="com.zzh.practice.master.model.User">
+        select
+        <include refid="Base_Column_List"/>
+        from user
+        <if test="name != null and !#{@org.apache.commons.lang.StringUtils@trim(name)}!= ''">
+          where name like concat('%', concat(#{name}, '%'))
+        </if>
+    </select>
 </mapper>
